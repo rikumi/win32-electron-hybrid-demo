@@ -1,0 +1,38 @@
+{
+  "name": "tim-web-demo",
+  "version": "1.0.0",
+  "main": "Electron/main.js",
+  "scripts": {
+    "start": "electron Electron/main.js",
+    "build": "electron-builder Electron/main.js --win",
+    "postinstall": "electron-rebuild",
+    "kill": "taskkill /f /im timweb.exe"
+  },
+  "dependencies": {
+    "ffi": "github:lxe/node-ffi#node-12",
+    "ref": "github:lxe/ref#node-12",
+    "win32-def": "^3.3.0"
+  },
+  "devDependencies": {
+    "electron": "4.0.0",
+    "electron-builder": "^21.2.0",
+    "electron-rebuild": "^1.8.6",
+    "windows-build-tools": "^5.2.2"
+  },
+  "build": {
+    "productName": "timweb",
+    "appId": "com.tencent.tim-web-demo",
+    "win": {
+      "target": [
+        "dir"
+      ]
+    },
+    "directories": {
+      "output": "Electron/dist"
+    },
+    "files": [
+      "Electron/main.js",
+      "Electron/renderer.html"
+    ]
+  }
+}

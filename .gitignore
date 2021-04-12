@@ -1,0 +1,11 @@
+node_modules
+.vs
+*.log
+*.tlog
+*.db
+*.opendb
+.swp
+dist
+/ElectronLoader/ElectronLoader/x64
+/ElectronLoader/x64
+/ElectronLoader/ipch
